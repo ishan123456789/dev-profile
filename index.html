@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ishan Mahajan - Full Stack Engineer</title>
+  <meta name="description" content="Ishan Mahajan is a full stack engineer with 6+ years of experience in various tech stacks. Skilled in Ruby on Rails, Kotlin, React, NodeJS, and AWS. Driven to deliver innovative solutions, I leverage my 6+ years of experience in various tech stacks to create high-performing, user-centric projects across multiple industries including finance, operations, and logistics.">
+  <style>
+    /* Responsive background image */
+    .bg-image {
+      position: relative;
+      /* to contain the note */
+    }
+
+    .bg-image img {
+      width: 100%;
+      /* to fill the container*/
+      height: 100vh;
+      /* to fill the container*/
+      object-fit: cover;
+      /* to fill the container*/
+    }
+
+    /* Responsive note */
+    .note {
+      position: absolute;
+      bottom: 2%;
+      left: 2%;
+      width: 30vw;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* About Me Section */
+    .about-me {
+      padding: 2rem;
+    }
+
+    /* Headings */
+    .about-me h1,
+    .about-me h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .experience {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .company {
+      flex: 1;
+      margin: 1rem;
+      padding: 1rem;
+      background-color: #f5f5f5;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      min-width: 200px;
+    }
+
+
+    .company::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 2px 2px 3px #000;
+    }
+
+    .company:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .company h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .duration {
+      font-style: italic;
+      font-size: 0.8rem;
+    }
+
+    .company ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.5rem;
+    }
+
+    .company li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+    }
+
+    .company li::before {
+      content: "▶";
+      font-size: 1.5rem;
+      color: #333;
+      margin-right: 0.5rem;
+    }
+
+    /** Skills    */
+    /* Skills section container */
+    .skills-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Profile image */
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    /* Skill list */
+    /* Category name */
+    /* Skills section container */
+    .skills-section {
+      padding: 2rem;
+      /* to add some space around the text */
+    }
+
+    /* Category container */
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Skill category */
+    .skill-category {
+      flex: 1;
+      /* to make each category take up equal space on the row */
+      margin: 1rem;
+      /* to add some space around the category */
+    }
+
+    /* Category name */
+    .category-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Skill list */
+    .skill-category ul {
+      list-style: none;
+      /* to remove the default bullet points */
+      padding-left: 0;
+      /* to remove the default left padding */
+    }
+
+    /* Skill list items */
+    .skill-category li {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
+    /** Accomplishment */
+    /* Accomplishments section */
+    .accomplishments-section {
+      padding: 2rem;
+      background-color: #f5f5f5;
+      /* adding light background color to make text stand out */
+    }
+
+    /* Accomplishments container */
+    .accomplishments-container {
+      display: flex;
+      /* to display accomplishments in a row */
+      flex-wrap: wrap;
+      /* to wrap accomplishments to a new row when there's not enough space */
+      justify-content: space-between;
+      /* to distribute accomplishments evenly across the row */
+      align-items: flex-start;
+      /* to align accomplishments to the top */
+    }
+
+    /* Accomplishment */
+    .accomplishment {
+      flex: 1;
+      /* to make each accomplishment take up equal space on the row */
+      padding: 1rem;
+      /* to add some space around the accomplishment */
+      background-color: white;
+      /* to make the accomplishment stand out */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* to add a subtle shadow */
+      border-radius: 8px;
+      /* to add rounded edges */
+      margin-bottom: 2rem;
+      /* to add some space between each accomplishment */
+      min-width: 200px;
+          margin-right: 0.3rem;
+    }
+
+    /* Accomplishment heading */
+    .accomplishment h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    /* Accomplishment description */
+    .accomplishment p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    
+    /** Footer */
+    footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+    @media (max-width: 768px) {
+
+      /* Change the breakpoint as per your requirement */
+      /* Make the skill categories stack vertically on smaller screens */
+      .category-container {
+        flex-direction: column;
+      }
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 480px) {
+
+      /* styles for mobile devices */
+      .note {
+        width: 80%;
+        /* adjust the width to fit the screen */
+        font-size: 1rem;
+        /* adjust the font size */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-image">
+    <img src="https://www.linkpicture.com/q/Screenshot-2023-01-21-at-14400-PM-transformed.png" alt="Background Image">
+    <div class="note">
+      <p>Driven to deliver innovative solutions, I leverage my 6+ years of experience in various tech stacks to create high-performing, user-centric projects across multiple industries including finance, operations, and logistics.</p>
+    </div>
+  </div>
+  <div class="about-me">
+    <h1>Ishan Mahajan - Full Stack Engineer</h1>
+    <h2>Experience</h2>
+
+    <div class="experience">
+      <div class="company">
+        <h3>Delivery Hero - Software Engineer</h3>
+        <p class="duration">August 2022 - Present</p>
+        <ul>
+          <li>Stack being used: Ruby on Rails, Kotlin, Postgres, AWS resources like ElasticCache, RDS, Services being deployed using Spinnaker, Drone for CI/CD, React for FrontEnd.</li>
+          <li>Load testing existing project</li>
+          <li>Upgrading services to use the latest packages</li>
+          <li>Developing new UIs to improve UX of high impacting dashboards.</li>
+        </ul>
+      </div>
+      <div class="company">
+        <h3>HFC part of Delivery Hero - Full Stack Engineer</h3>
+        <p class="duration">September 2019 - August 2022</p>
+        <ul>
+          <li>Participated in weekly sprints where we get our weekly goals defined and discussed new feature requests and bugs in current apps</li>
+          <li>Developed the front end as per the provided mock-ups. Using NextJS on the front-end while developing using TypeScript.</li>
+          <li>Developed NodeJS backend in KoaJS, express along with typescript for GraphQL and REST APIs and using PubSub queues for async operations.</li>
+          <li>Unit Testing each and every module we worked on, using Jest in typescript, also for some of our services adding integration tests.</li>
+        </ul>
+      </div>
+      <div class="company">
+        <h3>75 Way Technologies, Panchkula - Full Stack Engineer</h3>
+        <p class="duration">April 2017 - September 2019</p>
+        <ul>
+          <li>Developed web and mobile apps from scratch and delivered testable code and products.</li>
+          <li>Debugged and added new features to present working apps, along with optimizing apps for better performance.</li>
+          <li>Deployed apps on various platforms including App store, Play store, Linux servers.</li>
+          <li>Unit, Integration, E2E testing.</li>
+          <li>Delivered and lead in more than 40 projects within tenure.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h2>Tools and Skills</h2>
+      <div class="category-container">
+        <div class="skill-category">
+          <div class="category-name">Languages and Frameworks</div>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>AngularJS</li>
+            <li>Angular</li>
+            <li>ReactJS</li>
+            <li>React Native</li>
+            <li>IONIC</li>
+            <li>NodeJS</li>
+            <li>KoaJS</li>
+            <li>Express</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="category-name">Database and Storage</div>
+          <ul>
+            <li>Postgres</li>
+            <li>MongoDB</li>
+            <li>AWS</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="category-name">DevOps and CI/CD</div>
+          <ul>
+            <li>Spinnaker</li>
+            <li>Drone</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="accomplishments-section">
+      <h2>Accomplishments</h2>
+      <div class="accomplishments-container">
+        <div class="accomplishment">
+          <h3>Reduced MongoDB cost by more than 50%</h3>
+          <p>Mongo Atlas: I optimized the queries to move from a M20-M30 atlas cluster (costing around .2$/hr) to a M10 cluster (costing around 0.08$/hr) and optimized most of our API endpoints with p95 below 500ms.</p>
+        </div>
+        <div class="accomplishment">
+          <h3>Improved code quality + Test coverage</h3>
+          <p>Koa, Jest, REST: I lead the introduction of TypeScript to old services, improved test coverage, introduced linting and formatting rules.</p>
+        </div>
+        <div class="accomplishment">
+          <h3>Introduced better monitoring with DataDog</h3>
+          <p>DataDog: Prior to DataDog, we were relying mostly on GCP logs for analyzing production issues and using slack alerts via code. As a part of this, we introduced SLOs for many of our services and made sure the SLAs are met, we introduced a lot of monitors to be alerted and respond as early as possible.</p>
+        </div>
+        <div class="accomplishment">
+          <h3>Actively worked on improving agile workflows</h3>
+          <p>As a part of HFC, starting from scratch we developed a lot of apps and for that we tried to adopt agile principles as much as we could, adapted them to fit our requirements, and introduced retrospectives bi-weekly.</p>
+        </div>
+        <div class="accomplishment">
+          <h3>Lead development of a couple of services</h3>
+          <p>As a part of HFC, we were using the concept of service owner and as a service owner I had a major role as a developer for 3 services of which 2 were backend service while one being a full stack React based app using Firebase as a DB. As a service owner I kept SLAs in check and made sure new features are rolled out in good quality within the deadlines along with my awesome team.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Contact Information</h4>
+      <ul>
+        <li>Ishan Mahajan</li>
+        <li>Full Stack Engineer</li>
+        <li>Amritsar, Punjab</li>
+        <li>Email: <a href="mailto:immjfl+hello@gmail.com">immjfl+hello@gmail.com</a></li>
+        <li>Skype: live:fd8ad2ba571a4f79</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Social Media</h4>
+      <ul>
+        <li><a href="https://linkedin.com/in/IshanMahajan24">LinkedIn</a></li>
+        <li><a href="https://github.com/ishan123456789">Github</a></li>
+        <li><a href="https://stackoverflow.com/users/6517383">Stack Overflow</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>
